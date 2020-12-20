@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Workshop.Scripts
 {
     public class Character
@@ -14,6 +16,7 @@ namespace Workshop.Scripts
         public void Heal(int amount)
         {
             _currentHp += amount;
+            _currentHp=Mathf.Min(100 , _currentHp);
         }
     }
 }

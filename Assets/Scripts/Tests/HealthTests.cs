@@ -38,13 +38,15 @@ namespace Tests
             _character.TakeDamage(amount);
             HpShouldBe(expected);
         }
+
         [Test]
-        [TestCase(8,  108)]
-        public void Hp_Increase_When_Character_Heal(int amount , int expected)
+        [TestCase(8 , 100)]
+        public void Hp_Have_MaxValue_When_Character_Heal_Then_Hp_Increase(int amount , int expected)
         {
             _character.Heal(amount);
             HpShouldBe(expected);
         }
+
 
     #endregion
 
