@@ -30,10 +30,13 @@ namespace Tests
         }
 
         [Test]
-        public void Hp_Decrease_When_Character_TakeDamage()
+        [TestCase(7,93)]
+        [TestCase(101,-1)]
+        [TestCase(-6,106)]
+        public void Hp_Decrease_When_Character_TakeDamage(int amount , int expected)
         {
-            _character.TakeDamage(7);
-            HpShouldBe(93);
+            _character.TakeDamage(amount);
+            HpShouldBe(expected);
         }
 
     #endregion

@@ -2,11 +2,11 @@ namespace Workshop.Scripts
 {
     public class Character
     {
-        private uint _currentHp = 100;
+        private int _currentHp = 100;
 
-        public uint GetHp() => _currentHp;
+        public int GetHp() => _currentHp;
 
-        public void TakeDamage(uint amount)
+        public void TakeDamage(int amount)
         {
             _currentHp -= amount;
         }
