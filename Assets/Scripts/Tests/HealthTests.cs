@@ -5,27 +5,46 @@ namespace Tests
 {
     public class HealthTests
     {
+    #region Private Variables
+
+        private Character _character;
+
+    #endregion
+
+    #region Setup/Teardown Methods
+
+        [SetUp]
+        public void SetUp()
+        {
+            _character = new Character();
+        }
+
+    #endregion
+
+    #region Test Methods
+
         [Test]
         public void Hp_Is_100_When_Character_Spawn()
         {
-            // arrange
-            var character = new Character();
-            // act
-            var hp            = character.GetHp();
-            // assert
-            Assert.AreEqual(100 , hp);
+            HpShouldBe(100);
         }
 
         [Test]
         public void Hp_Decrease_When_Character_TakeDamage()
         {
-            // arrange
-            var character = new Character();
-            // act
-            character.TakeDamage(7);
-            var hp = character.GetHp();
-            // assert
-            Assert.AreEqual(93 , hp);
+            _character.TakeDamage(7);
+            HpShouldBe(93);
         }
+
+    #endregion
+
+    #region Private Methods
+
+        private void HpShouldBe(int expected)
+        {
+            Assert.AreEqual(expected , _character.GetHp());
+        }
+
+    #endregion
     }
 }
