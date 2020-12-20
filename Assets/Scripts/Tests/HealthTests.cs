@@ -41,6 +41,7 @@ namespace Tests
 
         [Test]
         [TestCase(8 , 100)]
+        [TestCase(-8 , 100)]
         public void Hp_Have_MaxValue_When_Character_Heal_Then_Hp_Increase(int amount , int expected)
         {
             _character.Heal(amount);

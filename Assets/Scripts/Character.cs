@@ -18,6 +18,7 @@ namespace Workshop.Scripts
 
         public void Heal(int amount)
         {
+            if (amount < 0) return;
             _currentHp += amount;
             _currentHp=Mathf.Min(100 , _currentHp);
         }
