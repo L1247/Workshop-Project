@@ -10,5 +10,10 @@ namespace Workshop.Scripts
         {
             _currentHp -= amount;
         }
+
+        public void Heal(int amount)
+        {
+            _currentHp += amount;
+        }
     }
 }

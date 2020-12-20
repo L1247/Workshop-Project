@@ -38,6 +38,13 @@ namespace Tests
             _character.TakeDamage(amount);
             HpShouldBe(expected);
         }
+        [Test]
+        [TestCase(8,  108)]
+        public void Hp_Increase_When_Character_Heal(int amount , int expected)
+        {
+            _character.Heal(amount);
+            HpShouldBe(expected);
+        }
 
     #endregion
 
