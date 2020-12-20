@@ -61,6 +61,15 @@ namespace Tests
             HpShouldBe(expected);
         }
 
+        [Test]
+        public void Hp100Sub7Add8ShouldBe100()
+        {
+            _character.SetMaxHp(100);
+            _character.TakeDamage(7);
+            _character.Heal(8);
+            HpShouldBe(100);
+        }
+
     #endregion
 
     #region Private Methods
