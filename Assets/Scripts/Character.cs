@@ -10,6 +10,7 @@ namespace Workshop.Scripts
 
         public void TakeDamage(int amount)
         {
+            if (amount < 0) return;
             _currentHp -= amount;
             _currentHp =  Mathf.Max(0 , _currentHp);
 
