@@ -11,6 +11,8 @@ namespace Workshop.Scripts
         public void TakeDamage(int amount)
         {
             _currentHp -= amount;
+            _currentHp =  Mathf.Max(0 , _currentHp);
+
         }
 
         public void Heal(int amount)

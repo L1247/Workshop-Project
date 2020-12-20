@@ -31,7 +31,6 @@ namespace Tests
 
         [Test]
         [TestCase(7,93)]
-        [TestCase(101,-1)]
         [TestCase(-6,106)]
         public void Hp_Decrease_When_Character_TakeDamage(int amount , int expected)
         {
@@ -44,6 +43,16 @@ namespace Tests
         public void Hp_Have_MaxValue_When_Character_Heal_Then_Hp_Increase(int amount , int expected)
         {
             _character.Heal(amount);
+            HpShouldBe(expected);
+        }
+
+        [Test]
+        [TestCase(100,   0)]
+        [TestCase(101, 0)]
+        [TestCase(200,  0)]
+        public void Hp_Have_MinValue_Character_TakeDamage(int amount , int expected)
+        {
+            _character.TakeDamage(amount);
             HpShouldBe(expected);
         }
 
