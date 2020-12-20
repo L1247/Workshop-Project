@@ -6,7 +6,7 @@ namespace Tests
     public class HealthTests
     {
         [Test]
-        public void Hp_Greater_Zero_When_Character_Spawn()
+        public void Hp_Is_100_When_Character_Spawn()
         {
             // arrange
             var character = new Character();
