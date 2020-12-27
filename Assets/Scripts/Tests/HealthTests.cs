@@ -19,6 +19,7 @@ namespace Tests
             _character = new Character();
         }
 
+
     #endregion
 
     #region Test Methods
@@ -33,7 +34,7 @@ namespace Tests
         [TestCase(7 ,      93)]
         [TestCase(-6 ,     100)]
         [TestCase(-20000 , 100)]
-        public void Hp_Decrease_When_Character_TakeDamage(int amount , int expected)
+        public void Given_Character_When_Character_TakeDamage_Hp_Decrease(int amount , int expected)
         {
             _character.TakeDamage(amount);
             HpShouldBe(expected);
