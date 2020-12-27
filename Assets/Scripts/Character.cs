@@ -4,8 +4,14 @@ namespace Workshop.Scripts
 {
     public class Character
     {
-        private int _currentHp = 100;
+        private int _currentHp ;
         private int _maxHp;
+
+        public Character(int maxHp)
+        {
+            _maxHp     = maxHp;
+            _currentHp = _maxHp;
+        }
 
         public int GetHp() => _currentHp;
 

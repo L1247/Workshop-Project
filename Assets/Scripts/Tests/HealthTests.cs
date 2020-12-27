@@ -16,7 +16,7 @@ namespace Tests
         [SetUp]
         public void SetUp()
         {
-            _character = new Character();
+            _character = new Character(100);
         }
 
 
